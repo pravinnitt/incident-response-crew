@@ -8,6 +8,7 @@ import json
 sys.path.insert(0, os.path.dirname(__file__))
 
 from src.crew import build_incident_response_crew
+from src.rate_limiter import groq_rate_limiter
 
 # Page config
 st.set_page_config(
@@ -74,9 +75,30 @@ with st.sidebar:
     """)
 
     st.divider()
+
+    # Rate limit status
+    try:
+        usage = groq_rate_limiter.get_current_usage()
+        tokens_used = usage['tokens_used']
+        tokens_limit = usage['tokens_limit']
+        tokens_available = usage['tokens_available']
+        usage_pct = (tokens_used / tokens_limit) * 100
+
+        st.markdown("**⚡ API Rate Limit:**")
+        st.progress(usage_pct / 100)
+        st.caption(f"{tokens_used:,} / {tokens_limit:,} tokens used")
+
+        if tokens_available < 1000:
+            st.warning("⚠️ Low tokens available")
+        elif tokens_available < 2000:
+            st.info("ℹ️ Rate limit approaching")
+    except:
+        pass
+
+    st.divider()
     st.markdown("**Tech Stack:**")
     st.markdown("- CrewAI")
-    st.markdown("- LiteLLM")
+    st.markdown("- LiteLLM + Groq")
     st.markdown("- Python 3.10+")
 
 # Main content
