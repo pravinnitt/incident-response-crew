@@ -1,0 +1,24 @@
+[project]
+name = "incident-response-crew"
+version = "0.1.0"
+description = "Multi-agent AI system for automated incident response using CrewAI"
+authors = [{ name = "Incident Response Team" }]
+requires-python = ">=3.10"
+
+dependencies = [
+    "crewai",
+    "litellm>=1.75.3",
+    "openai",
+    "python-dotenv",
+    "streamlit",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest",
+    "black",
+    "ruff"
+]
+override-dependencies = [
+    "lancedb==0.0.0"
+]

@@ -1,0 +1,12 @@
+{
+  "incident_id": "INC-2026-03-28-003",
+  "service_name": "order-service",
+  "environment": "production",
+  "incident_start": "2026-03-28T18:00:00Z",
+  "incident_end": "2026-03-28T18:30:00Z",
+  "initial_report": "Orders stuck in pending state due to NullPointerException",
+  "reporter": "customer-support",
+  "affected_users": 300,
+  "error_rate": "5%",
+  "description": "Scenario 3: Application bug. NullPointerException when processing orders with null shipping address (pickup orders). No recent deployment. Should identify code bug as root cause."
+}

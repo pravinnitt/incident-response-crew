@@ -1,0 +1,49 @@
+{
+  "service": "payment-api",
+  "deployments": [
+    {
+      "id": "deploy-8923",
+      "service": "payment-api",
+      "version": "2.5.1",
+      "timestamp": "2026-03-28T09:58:00Z",
+      "status": "rolled_back",
+      "author": "john.doe",
+      "commit": "abc123def456",
+      "changes": [
+        "Added new database connection pooling configuration",
+        "Updated database timeout from 60s to 30s for faster failover",
+        "Modified retry logic for payment processing",
+        "Optimized connection pool management"
+      ],
+      "rollback_time": "2026-03-28T10:15:32Z",
+      "rollback_reason": "High error rate - database connection timeouts"
+    },
+    {
+      "id": "deploy-8922",
+      "service": "payment-api",
+      "version": "2.5.0",
+      "timestamp": "2026-03-27T14:30:00Z",
+      "status": "successful",
+      "author": "jane.smith",
+      "commit": "def789ghi012",
+      "changes": [
+        "Updated payment gateway API integration",
+        "Added logging for failed transactions",
+        "Improved error messages"
+      ]
+    },
+    {
+      "id": "deploy-8921",
+      "service": "payment-api",
+      "version": "2.4.9",
+      "timestamp": "2026-03-25T10:00:00Z",
+      "status": "successful",
+      "author": "bob.wilson",
+      "commit": "ghi345jkl678",
+      "changes": [
+        "Fixed currency conversion bug",
+        "Added support for new payment method"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "incident_id": "INC-2026-03-28-002",
+  "service_name": "user-service",
+  "environment": "production",
+  "incident_start": "2026-03-28T14:00:00Z",
+  "incident_end": "2026-03-28T14:45:00Z",
+  "initial_report": "High CPU usage causing service degradation and OutOfMemory errors",
+  "reporter": "datadog-monitoring",
+  "affected_users": 5000,
+  "error_rate": "25%",
+  "description": "Scenario 2: Infrastructure incident. Memory leak in UserCache causing CPU spike and OutOfMemoryError. No recent deployment. Should identify memory leak as root cause."
+}

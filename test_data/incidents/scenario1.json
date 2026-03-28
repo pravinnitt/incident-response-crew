@@ -1,0 +1,12 @@
+{
+  "incident_id": "INC-2026-03-28-001",
+  "service_name": "payment-api",
+  "environment": "production",
+  "incident_start": "2026-03-28T10:00:00Z",
+  "incident_end": "2026-03-28T10:30:00Z",
+  "initial_report": "Payment processing failures - users unable to complete checkout",
+  "reporter": "monitoring-system",
+  "affected_users": 1500,
+  "error_rate": "15%",
+  "description": "Scenario 1: Deployment-related incident. Database timeout configuration was changed from 60s to 30s in version 2.5.1, causing connection timeouts and payment failures. Should show HIGH deployment correlation."
+}

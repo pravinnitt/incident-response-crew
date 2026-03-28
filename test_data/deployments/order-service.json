@@ -1,0 +1,33 @@
+{
+  "service": "order-service",
+  "deployments": [
+    {
+      "id": "deploy-6721",
+      "service": "order-service",
+      "version": "3.2.1",
+      "timestamp": "2026-03-26T10:00:00Z",
+      "status": "successful",
+      "author": "sarah.jones",
+      "commit": "xyz901abc234",
+      "changes": [
+        "Added support for pickup delivery method",
+        "Updated order status tracking",
+        "Improved order validation logic"
+      ]
+    },
+    {
+      "id": "deploy-6720",
+      "service": "order-service",
+      "version": "3.2.0",
+      "timestamp": "2026-03-24T14:00:00Z",
+      "status": "successful",
+      "author": "mike.brown",
+      "commit": "def567ghi890",
+      "changes": [
+        "Refactored shipping calculation",
+        "Added inventory check integration"
+      ]
+    }
+  ],
+  "note": "No recent deployments in last 48 hours. Version 3.2.1 deployed 2 days before incident."
+}
